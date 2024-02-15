@@ -154,6 +154,10 @@ export const RulesItem = observer<RulesItemProps>((props) => {
 				</div>
 
 				<p className={styles.actionsSummary}>{active ? actionsSummary || 'No actions' : 'Inactive'}</p>
+				<p className={styles.rulesToogle}>
+					Active:{' '}
+					<Checkbox className={styles.activeCheckbox} checked={active} onChange={handleActiveToggle} />
+				</p>
 			</div>
 
 			{!isExportMode && (
